@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { addTask } from "../../../store/slices/taskSlice";
+import { addTaskStart } from "../../../store/slices/taskSlice";
 
 function AddTaskForm() {
   const [title, setTitle] = useState("");
@@ -9,7 +9,7 @@ function AddTaskForm() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (title.trim()) {
-      dispatch(addTask(title));
+      dispatch(addTaskStart(title));
       setTitle("");
     }
   };
