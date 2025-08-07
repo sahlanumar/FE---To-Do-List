@@ -61,6 +61,11 @@ const taskSlice = createSlice({
     setSearchKeyword: (state, action) => {
       state.searchKeyword = action.payload;
     },
+    reorderTasks: (state, action) => {
+      const { sourceIndex, destinationIndex } = action.payload;
+      const [removed] = state.tasks.splice(sourceIndex, 1);
+      state.tasks.splice(destinationIndex, 0, removed);
+    },
   },
 });
 
@@ -73,6 +78,7 @@ export const {
   editTask,
   setFilterStatus,
   setSearchKeyword,
+  reorderTasks,
 } = taskSlice.actions;
 
 export default taskSlice.reducer;

@@ -1,12 +1,44 @@
-# React + Vite
+# Aplikasi To-Do List (Prototype)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Ini adalah aplikasi prototype to-do list yang dibuat sebagai bagian dari tantangan coding. Aplikasi ini sepenuhnya berjalan di sisi client (frontend) tanpa memerlukan backend.
 
-Currently, two official plugins are available:
+## Screenshot Aplikasi
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![App Screenshot](public/screenshot.png)
 
-## Expanding the ESLint configuration
+## Fitur yang Diimplementasikan
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- [x] **Manajemen Tugas:** Tambah, Hapus, dan Edit tugas.
+- [x] **Status Tugas:** Tandai tugas sebagai "selesai" atau "aktif".
+- [x] **Filter & Pencarian:** Filter tugas berdasarkan status (semua, aktif, selesai) dan cari berdasarkan kata kunci.
+- [x] **Integrasi API Eksternal:** Menampilkan widget jam yang datanya diambil dari World Time API.
+- [x] **Animasi Loading:** Menampilkan indikator loading saat menambah tugas atau mengambil data dari API.
+- [x] **Drag and Drop:** Mengurutkan daftar tugas menggunakan drag-and-drop (hanya aktif saat tidak ada filter).
+
+## Teknologi yang Digunakan
+
+- **Framework:** React (dengan Vite)
+- **State Management:** Redux Toolkit & Redux-Saga
+- **Styling:** Tailwind CSS
+- **API Client:** Axios
+- **Fitur Tambahan:** React Beautiful DnD
+
+## Cara Menjalankan Proyek Secara Lokal
+
+1.  **Clone repository ini:**
+    ```bash
+    git clone <url-repository-anda>
+    ```
+2.  **Masuk ke direktori proyek:**
+    ```bash
+    cd <nama-folder-proyek>
+    ```
+3.  **Install semua dependensi:**
+    ```bash
+    npm install
+    ```
+4.  **Jalankan server development:**
+    ```bash
+    npm run dev
+    ```
+5.  Buka browser dan navigasi ke `http://localhost:5173` atau alamat yang tertera di terminal.

@@ -62,7 +62,7 @@ function TaskItem({ task }) {
         </button>
         <button
           onClick={handleDelete}
-          className="text-white bg-red-500 hover:bg-red-600 w-7 h-7 flex items-center justify-center rounded"
+          className="text-white bg-red-500 hover:bg-red-600 w-7 h-7 flex items-center justify-center rounded transition-colors duration-200"
         >
           X
         </button>

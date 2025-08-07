@@ -15,7 +15,7 @@ function ClockWidget() {
     if (isLoading) return <Loader />;
     if (error) return <p className="text-red-500 text-center">{error}</p>;
     if (timeData) {
-      const formattedTime = new Date(timeData.datetime).toLocaleTimeString(
+      const formattedTime = new Date(timeData.dateTime).toLocaleTimeString(
         "id-ID",
         {
           hour: "2-digit",
@@ -25,7 +25,7 @@ function ClockWidget() {
       );
       return (
         <div className="text-center">
-          <p className="font-semibold text-gray-700">{timeData.timezone}</p>
+          <p className="font-semibold text-gray-700">{timeData.timeZone}</p>
           <p className="text-3xl font-bold text-gray-900">{formattedTime}</p>
         </div>
       );
